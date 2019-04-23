@@ -1,4 +1,4 @@
-public class BleBase {
+﻿public class BleBase {
     //基站id
     private String id;
     //接收的信号强度
@@ -25,7 +25,7 @@ public class BleBase {
         double n = 3.63;
         double distance;
         /*基站到终端的直线距离*/
-        distance = Math.pow(10, (A - rssi)/(10*n));
+        distance = Math.pow(10, (Math.abs(rssi) - A)/(10*n));
         return distance;
     }
 
